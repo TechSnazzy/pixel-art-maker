@@ -24,4 +24,17 @@ function makeGrid() {
     }
   };
 
+  // choose a color from the color picker
+  $('td').click(function addColor() {
+    color = $('#colorPicker').val();
+
+    // if the cell already has a color applied, remove it
+    if($(this).attr('style')) {
+      $(this).removeAttr('style');
+      // if the cell does not have a background color then apply this style
+    } else {
+      $(this).attr('style', 'background-color:' + color);
+    }
+  });
+
 };
