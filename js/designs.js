@@ -21,20 +21,14 @@ function makeGrid(x, y) {
     $('#pixelCanvas').append('<tr id=table' + rows + '></tr>');
     for(var cols = 1; cols <= y; cols++) {
       $('#table' + rows).append('<td></td');
-    };
-  };
+    }
+  }
 
-  // choose a color from the color picker
-  $('td').click(function addColor() {
-    color = $('#colorPicker').val();
-
-    // if the cell already has a color applied, remove it
-    if($(this).attr('style')) {
-      $(this).removeAttr('style');
-    // if the cell does not have a background color then apply this style
-    } else {
-      $(this).attr('style', 'background-color:' + color);
-    };
+  // now select the td and add a click event to pick the color and apply
+  // it to the td
+  $('td').click(function(clickEvent) {
+    let color = $('#colorPicker').val();
+    $(clickEvent.target).css('background-color', color);
   });
 
-};
+}
