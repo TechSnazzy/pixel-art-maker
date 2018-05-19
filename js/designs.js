@@ -16,6 +16,12 @@ function makeGrid() {
   $('table tr').remove();
 
   // Your code goes here!
-
+  // create rows and cols
+  for(let rows=1;rows<=x;rows++) {
+    $('#pixelCanvas').append('<tr id="table"' + rows + '></tr>');
+    for(let cols=1;cols<=y;cols++) {
+      $('#table' + rows).append('<td></td>');
+    }
+  };
 
 };
