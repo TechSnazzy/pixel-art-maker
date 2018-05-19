@@ -17,9 +17,9 @@ function makeGrid(x, y) {
 
   // Your code goes here!
   // create rows and cols
-  for(var rows = 1; rows <= x; rows++) {
+  for(let rows = 1; rows <= x; rows++) {
     $('#pixelCanvas').append('<tr id=table' + rows + '></tr>');
-    for(var cols = 1; cols <= y; cols++) {
+    for(let cols = 1; cols <= y; cols++) {
       $('#table' + rows).append('<td></td');
     }
   }
