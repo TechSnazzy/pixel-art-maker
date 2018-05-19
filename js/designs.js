@@ -26,9 +26,9 @@ function makeGrid(x, y) {
 
   // now select the td and add a click event to pick the color and apply
   // it to the td
-  $('td').click(function(clickEvent) {
+  $('td').click(function(colorEvent) {
     let color = $('#colorPicker').val();
-    $(clickEvent.target).css('background-color', color);
+    $(colorEvent.target).css('background-color', color);
   });
 
 }
